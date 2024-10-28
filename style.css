@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Manrope';
+}
+
+.main-section{
+    display: flex;
+    padding: 10%;
+    max-width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;                   
+    background: rgb(252, 252, 252);
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items:center
+}
+
+.box-images{
+    width: 100%;
+    height: 100%;
+}
+
+.picture{
+    width: 32rem;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;   
+}
+
+.box-avatar{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.box-text-2{
+    padding: 3rem;
+   
+}
+
+h1{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.described{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    opacity: 0.7; 
+}
+
+.avatar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10rem;
+    margin-right: 2rem;
+}
+
+.box-avatar{
+    position: relative;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    align-items: center
+}
+
+.box-name{
+    margin-right: 18rem;
+}
+
+h2{
+    font-size: 1.3rem;
+    opacity: 0.8; 
+}
+
+.date{
+    font-size: 1.1rem;
+    opacity: 0.5; 
+}
+.social-icons p{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: white;
+    margin-right: 1rem;
+}
+
+.share-button {
+    position: relative;
+}
+
+button {
+    position: absolute;
+    border: none;          
+    cursor: pointer;      
+    padding: .8rem;          
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    background: hsl(210, 46%, 95%); 
+    margin-top: -8rem;
+    right: 3rem;
+    
+}
+.active {
+    background-color: hsl(214, 17%, 51%); /* Новый цвет кнопки при активации */
+}
+
+
+.icon-share{
+    width: 80%;                 
+    height: auto;                 
+    filter: brightness(0.5) invert(0.5); /* CSS фильтр для перекраски иконки в белый */
+}
+
+.icon-share.white {
+    filter: brightness(0) invert(1); /* белый цвет */
+}
+
+.social-icons {
+    display: none; 
+    position: absolute;
+    top: -12rem;        
+    right: -4.5rem;  
+    transform: translateY(-50%); 
+    background-color:  hsl(217, 19%, 35%);  
+    padding: 1.5rem;             
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 1rem
+}
+
+.social-icons::before {
+    content: "";
+    position: absolute;
+    top: 98%; 
+    left: 57%; 
+    transform: translateX(-50%);
+    border-width: 1rem 1rem 0 1rem; /* Размеры треугольника */
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent; 
+ 
+}
+
+.share-container:hover .social-icons {
+    display: block; 
+}
+  
+.social-icons a {
+    margin: 0 1rem; /* Отступы между иконками */
+}
+  
+.social-icons img {
+    width: 2rem,;   /* Ширина иконки */
+    height: 2rem;  /* Высота иконки */
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 53%;
+    }
+ }
+@media (max-width: 768px) {
+    html {
+        font-size:  62.5%;
+    }
+    .main-section{
+        display: flex;
+        padding: 10%;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 100vw;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .picture{
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .box-avatar{
+        margin-bottom: 1.5rem;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    .described{
+        font-size: 1.3rem;
+    }
+
+    .avatar{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+   
+    .box-name{
+        margin-right: 10rem;
+    }
+
+    .social-icons::before {
+        display: none;
+    }
+
+    .share-button { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    button {
+        margin-top: -8rem;
+        z-index: 21;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .social-icons {
+        display: flex; 
+        align-items: center; 
+        top: -4rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 4rem;
+        border-radius: 0 0 1rem 1rem;
+        overflow: hidden; 
+      
+    }
+
+    .social-icons img {
+        width: 2.5rem,;   /* Ширина иконки */
+        height: 2.5rem;  /* Высота иконки */
+      }
+   
+
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 53%;
+    }
+    .button {
+        width: 1rem;   
+        height: 1rem;  
+        padding: 0;
+        margin-right: 2rem;
+
+    }
+    .icon-share{
+        width: 60%;
+    }
+    .social-icons {
+        padding: 4rem 2rem ;
+    }
+    .social-icons img {
+        width: 3rem;   
+        height: 3rem;  
+    }
+}
+
+@media (max-width: 385px) {
+
+    .social-icons img {
+        width: 2rem;   
+        height: 2rem;  
+    }
+
+    .social-icons a{
+        margin: .5rem;
+    }
+}
+    
+
+    
+
+
+  
+
+   
+  
